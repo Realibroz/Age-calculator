@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smart Age Calculator</title>
+</head>
+<body>
+    <!-- Login Card -->
+    <div class="card login-card">
+        <h1>Age Calculator</h1>
+        <button class="btn btn-login" id="login-button">Log in</button>
+        <p>or</p>
+        <button class="btn btn-create" id="create-account">Create New Account</button>
+    </div>
+
+    <!-- Dashboard Card -->
+    <div class="card dashboard-card" style="display: none;">
+        <h2>Welcome to the Dashboard</h2>
+        
+        <!-- Profile Info Section -->
+        <div class="profile-info">
+            <img id="profile-pic" alt="Profile Picture" class="profile-pic" src="">
+            <p id="profile-name" class="profile-name"></p>
+            <p id="profile-email" class="profile-email"></p>
+            <button id="edit-profile" class="btn btn-edit">Edit Profile</button>
+            <button id="logout" class="btn btn-logout">Logout</button>
+        </div>
+        
+        <p>Enter your birth date to calculate your age.</p>
+        <input type="date" id="dob">
+        <button class="btn btn-generate" id="generate">Generate</button>
+        <div id="age-result" class="age-result">Your Age: </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="edit-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <label>Name:</label>
+            <input type="text" id="edit-name" placeholder="Enter your name">
+            <label>Email:</label>
+            <input type="email" id="edit-email" placeholder="Enter your email">
+            <label>Profile Picture:</label>
+            <input type="file" id="edit-pic" accept="image/*">
+            <button id="save-profile" class="btn btn-save">Save Profile</button>
+            <button id="close-modal" class="btn btn-close">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
